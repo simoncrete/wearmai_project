@@ -12,7 +12,8 @@ from datasets.preprocess import h36m_extract,\
                                 lsp_dataset_original_extract, \
                                 hr_lspet_extract, \
                                 mpii_extract, \
-                                coco_extract
+                                coco_extract, \
+                                wearmai_data_extract
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--train_files', default=False, action='store_true', help='Extract files needed for training')
@@ -26,6 +27,7 @@ if __name__ == '__main__':
     openpose_path = cfg.OPENPOSE_PATH
 
     if args.train_files:
+        '''        
         # MPI-INF-3DHP dataset preprocessing (training set)
         mpi_inf_3dhp_extract(cfg.MPI_INF_3DHP_ROOT, openpose_path, out_path, 'train', extract_img=True, static_fits=cfg.STATIC_FITS_DIR)
 
@@ -40,6 +42,9 @@ if __name__ == '__main__':
 
         # COCO dataset prepreocessing
         coco_extract(cfg.COCO_ROOT, openpose_path, out_path)
+        '''
+        # WEARMAI dataset preprocessing
+        wearmai_data_extract(cfg.WEARMAI_ROOT, '', out_path)
 
     if args.eval_files:
         # Human3.6M preprocessing (two protocols)

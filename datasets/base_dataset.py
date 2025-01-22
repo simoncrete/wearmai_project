@@ -76,8 +76,12 @@ class BaseDataset(Dataset):
             keypoints_openpose = self.data['openpose']
         except KeyError:
             keypoints_openpose = np.zeros((len(self.imgname), 25, 3))
+        #print('keypoints_openpose:', keypoints_openpose.shape)
+        #print('keypoints_gt:', keypoints_gt.shape)
+        
         self.keypoints = np.concatenate([keypoints_openpose, keypoints_gt], axis=1)
-
+        print('keypoints:', self.keypoints.shape)        
+        
         # Get gender data, if available
         try:
             gender = self.data['gender']

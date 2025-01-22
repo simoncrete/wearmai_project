@@ -10,10 +10,11 @@ LSP_ROOT = ''
 LSP_ORIGINAL_ROOT = ''
 LSPET_ROOT = ''
 MPII_ROOT = ''
-COCO_ROOT = ''
+COCO_ROOT = '/home/simon/Desktop/COCO2014'
 MPI_INF_3DHP_ROOT = ''
 PW3D_ROOT = ''
 UPI_S1H_ROOT = ''
+WEARMAI_ROOT = '/home/simon/Desktop/wearMAI_data/coco'
 
 # Output folder to save test/train npz files
 DATASET_NPZ_PATH = 'data/dataset_extras'
@@ -35,6 +36,7 @@ DATASET_FILES = [ {'h36m-p1': join(DATASET_NPZ_PATH, 'h36m_valid_protocol1.npz')
                    'lsp-orig': join(DATASET_NPZ_PATH, 'lsp_dataset_original_train.npz'),
                    'mpii': join(DATASET_NPZ_PATH, 'mpii_train.npz'),
                    'coco': join(DATASET_NPZ_PATH, 'coco_2014_train.npz'),
+                   'wearmai': join(DATASET_NPZ_PATH, 'wearmai_train.npz'),
                    'lspet': join(DATASET_NPZ_PATH, 'hr-lspet_train.npz'),
                    'mpi-inf-3dhp': join(DATASET_NPZ_PATH, 'mpi_inf_3dhp_train.npz')
                   }
@@ -51,6 +53,7 @@ DATASET_FOLDERS = {'h36m': H36M_ROOT,
                    'coco': COCO_ROOT,
                    '3dpw': PW3D_ROOT,
                    'upi-s1h': UPI_S1H_ROOT,
+                   'wearmai': WEARMAI_ROOT,
                 }
 
 CUBE_PARTS_FILE = 'data/cube_parts.npy'

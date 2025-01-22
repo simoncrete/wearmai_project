@@ -6,3 +6,4 @@ from .lsp_dataset_original import lsp_dataset_original_extract
 from .hr_lspet import hr_lspet_extract
 from .mpii import mpii_extract
 from .coco import coco_extract
+from .wearmai_data import wearmai_data_extract
